@@ -1,86 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
-
-
-    <style>
-        * {
-            font-family: 'News Cycle', sans-serif;
-            background: #0F1934;
-        }
-
-
-
-
-        /********/
-        /* LOGO */
-        /********/
-        .ngy2_logo {
-            border-left: none;
-            padding-left: 0;
-            color: #fff !important;
-            font-weight: bold;
-        }
-
-        /* animated logo */
-        .ngy2_logo svg {
-            display: block;
-            letter-spacing: 25px;
-            font-size: 80px;
-        }
-
-        .ngy2_logo .text-copy {
-            fill: none;
-            stroke: #000;
-            stroke-dasharray: 6% 29%;
-            stroke-width: 0.5px;
-            stroke-dashoffset: 0%;
-            animation: stroke-offset 5.8s infinite linear;
-        }
-
-        .ngy2_logo .text-copy:nth-child(1) {
-            stroke: #23CB99;
-            animation-delay: -1;
-        }
-
-        .ngy2_logo .text-copy:nth-child(2) {
-            stroke: #46D6AB;
-            animation-delay: -2s;
-        }
-
-        .ngy2_logo .text-copy:nth-child(3) {
-            stroke: #23CB99;
-            animation-delay: -3s;
-        }
-
-        .ngy2_logo .text-copy:nth-child(4) {
-            stroke: #23CB99;
-            animation-delay: -4s;
-        }
-
-        .ngy2_logo .text-copy:nth-child(5) {
-            stroke: #23CB99;
-            animation-delay: -5s;
-        }
-
-        @keyframes stroke-offset {
-            100% {
-                stroke-dashoffset: -35%;
-            }
-        }
-
-    </style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href=https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=".//style.css">
+    <title>RandonTubes.net</title>
 </head>
 
 <body>
-
-
-
     <span class="ngy2_color2 ngy2_logo">
         <svg height="130" width="100%">
             <symbol id="s-text">
@@ -94,13 +24,22 @@
                 <use xlink:href="#s-text" class="text-copy"></use>
             </g>
         </svg>
-    </span>
+        <div class="contaner">
+            <div class="video">
+                <iframe id="theVideo" src="" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <button class="btn">Click Me!</button>
+            <p></p>
+        </div>
 
 
 
-
-
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src=".//app.js"></script>
+        <script src=".//cookiehandle.js"></script>
 </body>
 
 </html>

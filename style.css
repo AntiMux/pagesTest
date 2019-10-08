@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'News Cycle', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    background: rgb(15, 25, 52);
+    background: radial-gradient(circle, rgba(15, 25, 52, 1) 56%, rgba(10, 16, 32, 1) 100%);
+}
+
+.contaner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.video {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#theVideo {
+    margin-top: 40px;
+    width: 845px;
+    height: 520px;
+}
+
+.btn {
+    width: 300px;
+    height: 70px;
+    font-size: 32px;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: 600;
+    position: relative;
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+    background-color: rgb(40, 187, 143);
+    font-weight: 700;
+    display: block;
+    border: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 5px 0px rgb(1, 100, 70), 0px 9px 25px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: 0px 5px 0px rgb(1, 100, 70), 0px 9px 25px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 5px 0px rgba(1, 100, 70), 0px 9px 25px rgba(255, 255, 255, 0.1);
+    margin: 80px auto;
+    text-align: center;
+
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+}
+
+.btn:active {
+    -webkit-box-shadow: 0px 3px 0px rgb(11, 75, 56), 0px 3px 6px rgba(0, 19, 31, 0.9);
+    -moz-box-shadow: 0px 3px 0px rgba(11, 75, 56), 0px 3px 6px rgba(0, 19, 31, 0.9);
+    box-shadow: 0px 3px 0px rgba(11, 75, 56), 0px 3px 6px rgba(0, 19, 31, 0.9);
+    position: relative;
+    top: 3px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+
+
+.ngy2_logo {
+    border-left: none;
+    padding-left: 0;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* animated logo */
+.ngy2_logo svg {
+    display: block;
+    letter-spacing: 5px;
+    font-size: 55px;
+    margin-top: -10px;
+}
+
+.ngy2_logo .text-copy {
+    fill: none;
+    stroke: #000;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 0.7px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.8s infinite linear;
+}
+
+.ngy2_logo .text-copy:nth-child(1) {
+    stroke: #23CB99;
+    animation-delay: -1;
+}
+
+.ngy2_logo .text-copy:nth-child(2) {
+    stroke: #46D6AB;
+    animation-delay: -2s;
+}
+
+.ngy2_logo .text-copy:nth-child(3) {
+    stroke: #23CB99;
+    animation-delay: -3s;
+}
+
+.ngy2_logo .text-copy:nth-child(4) {
+    stroke: #23CB99;
+    animation-delay: -4s;
+}
+
+.ngy2_logo .text-copy:nth-child(5) {
+    stroke: #23CB99;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #theVideo {
+        width: 795px;
+        height: 550px;
+    }
+
+    .btn {
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 823px) {
+    * {
+        overflow: auto;
+    }
+
+    #theVideo {
+        width: 400px;
+        height: 200px;
+        margin: 0;
+    }
+
+    .btn {
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .ngy2_logo svg {
+        font-size: 40px;
+        margin-top: 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .ngy2_logo svg {
+        margin-top: 40px;
+    }
+
+    #theVideo {
+        width: 695px;
+        height: 450px;
+    }
+
+    .btn {
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 411px) {
+
+
+    #theVideo {
+        width: 340px;
+        height: 300px;
+        margin: 20px;
+    }
+
+    .btn {
+        width: 250px;
+        height: 50px;
+        font-size: 25px;
+        margin: 60px auto;
+    }
+
+    .ngy2_logo svg {
+        font-size: 40px;
+        margin-top: 0;
+    }
+
+}
