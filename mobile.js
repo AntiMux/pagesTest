@@ -1,11 +1,18 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 	
-	window.onload = function() {
-		if(!window.location.hash) {
-			window.location = window.location + '#loaded';
-			window.location.reload();
+	(function()
+	{
+		if( window.localStorage )
+		{
+			if( !localStorage.getItem('firstLoad') )
+			{
+				localStorage['firstLoad'] = true;
+				window.location.reload();
+			}  
+			else
+			localStorage.removeItem('firstLoad');
 		}
-	}
+	})();
     function addVideoToDom() {
 
         // adding elements to the dom
@@ -61,8 +68,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         let value = video[key];
         let clean_value = value.replace(/&#39;/g, "'")
         let final_value = clean_value.replace(/&quot;/g, "\"")
+		let super_final_value = final_value.replace(/&amp;/g, "&")
         videoElemnt.src = "https://www.youtube.com/embed/" + key + "?&autoplay=1";
-        videoTitleElemnt.textContent = final_value;
+        videoTitleElemnt.textContent = super_final_value;
         shareLink.value = "https://www.randomtubes.net?link=" + key;
         removeFirstItemFromLS()
 
