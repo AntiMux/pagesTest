@@ -1,5 +1,11 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-	location.reload();
+	
+	let once = true
+	if (once == true){
+		location.reload();
+		once = false;
+	};
+	
     function addVideoToDom() {
 
         // adding elements to the dom
