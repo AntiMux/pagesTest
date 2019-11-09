@@ -1,9 +1,9 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 	
-	let once = true
-	if (once == true){
+	let once = localStorage.getItem("random_videos");
+	console.log(once)
+	if (once == null){
 		location.reload();
-		once = false;
 	};
 	
     function addVideoToDom() {
