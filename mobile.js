@@ -1,11 +1,11 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 	
-	let once = localStorage.getItem("random_videos");
-	console.log(once)
-	if (once == null){
-		location.replace("https://www.randomtubes.net");
-	};
-	
+	window.onload = function() {
+		if(!window.location.hash) {
+			window.location = window.location + '#loaded';
+			window.location.reload();
+		}
+	}
     function addVideoToDom() {
 
         // adding elements to the dom
