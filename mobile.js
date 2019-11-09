@@ -3,7 +3,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	let once = localStorage.getItem("random_videos");
 	console.log(once)
 	if (once == null){
-		location.reload(true);
+		location.replace("https://www.randomtubes.net");
 	};
 	
     function addVideoToDom() {
